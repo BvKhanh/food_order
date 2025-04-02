@@ -1,0 +1,67 @@
+/* src/css/Home.css */
+
+/* Carousel */
+.carousel-item .jumbotron {
+  margin-bottom: 0;
+}
+
+/* Banner */
+.jumbotron-custom {
+  background-color: #007bff; /* Màu xanh của bg-primary */
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 1.25rem;
+}
+
+.custom-order-btn {
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+}
+
+.custom-order-btn:hover {
+  background-color: #e9ecef;
+}
+
+/* Flash Deal */
+.flash-deal h2 {
+  color: #dc3545; /* Màu đỏ của text-danger */
+}
+
+.flash-deal .badge {
+  font-size: 1.25rem;
+}
+
+/* Explore Menu */
+.explore-menu .card {
+  transition: transform 0.3s;
+}
+
+.explore-menu .card:hover {
+  transform: translateY(-10px);
+}
+
+/* Testimonials */
+.testimonials .card {
+  background-color: #f8f9fa;
+}
+
+/* Features */
+.features .card i {
+  color: #007bff; /* Màu xanh của text-primary */
+}
+
+/* Floating Button */
+.btn-floating {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
