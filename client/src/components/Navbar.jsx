@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
-        <NavLink className="navbar-brand" to="/">Paradise<span>Food</span></NavLink>
+        <NavLink className="navbar-brand" to="/">Food<span>Paradise</span></NavLink>
         <button
           className="navbar-toggler"
           type="button"

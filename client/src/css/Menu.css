@@ -1,61 +1,52 @@
-/* src/css/Menu.css */
-
-/* Header */
-.header-section h1 {
-  font-size: 2.5rem;
+.menu-page {
+  font-family: 'Roboto', sans-serif;
 }
 
-.header-section p {
-  font-size: 1.25rem;
+.menu-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Menu Categories */
-.menu-category h2 {
-  color: #007bff; /* Màu xanh của text-primary */
-  font-size: 1.75rem;
-}
-
-.menu-category .card {
-  transition: transform 0.3s;
-}
-
-.menu-category .card:hover {
+.menu-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-.menu-category .card-img-top {
-  height: 200px;
-  object-fit: cover;
+.menu-card-img img:hover {
+  transform: scale(1.05);
 }
 
-.menu-category .card-title {
-  font-size: 1.25rem;
+.category-badge {
+  transition: background 0.3s ease;
 }
 
-.menu-category .card-text {
-  font-size: 1.1rem;
+.category-badge:hover {
+  background: #fdcb6e;
 }
 
-/* Cart */
-.cart-section .card {
-  background-color: #f8f9fa;
+.btn-primary {
+  background: #e17055;
 }
 
-.cart-section .list-group-item {
-  font-size: 1rem;
+.btn-primary:hover {
+  background: #fdcb6e;
+  color: #2d3436;
 }
 
-.cart-section .btn-sm i {
-  font-size: 0.9rem;
+.card-body {
+  display: flex;
+  flex-direction: column;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .cart-section {
-    margin-top: 2rem;
-    position: static !important;
+@media (max-width: 576px) {
+  .menu-card-img img {
+    height: 180px;
   }
-  .menu-category .card {
-    margin-bottom: 1rem;
+
+  .card-title {
+    font-size: 1.2rem !important;
+  }
+
+  .card-text {
+    font-size: 0.9rem !important;
   }
 }

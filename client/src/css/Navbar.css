@@ -35,20 +35,21 @@
   color: #f28c38;
 }
 
-/* Làm nổi bật mục "Home" */
+/* Làm nổi bật mục được chọn (active) */
 .nav-link.active {
-  background-color: #FFFFFF; /* Nền cam nhạt ban đầu */
-  color: #FFFFFF; /* Màu chữ trắng */
-  border: 2px #ffaa33; /* Viền cam sáng */
+  font-weight: bold;
+  background-color: #fff; /* Nền cam nhạt ban đầu */
+  color: #FF0000; /* Màu chữ đỏ */
+  border: 2px solid #ffaa33; /* Viền cam sáng */
   box-shadow: 0 0 8px #ffaa33; /* Bóng cam sáng ban đầu */
   border-radius: 10px;
-  transition: background-color 0.3s, box-shadow 0.3s; /* Thêm transition cho nền và bóng */
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Khi hover lên Home */
+/* Khi hover lên nút active */
 .nav-link.active:hover {
   background-color: #f28c38; /* Nền cam khi hover */
-  color: #FFFFFF; /* Giữ màu trắng cho chữ */
+  color: #FF0000; /* Giữ màu đỏ cho chữ */
   border: 2px #ffaa33; /* Giữ viền cam sáng */
   box-shadow: 0 0 12px #FFFFFF; /* Bóng trắng sáng khi hover */
 }
@@ -66,11 +67,11 @@
 }
 
 .dropdown-item {
-  color: #333;
+  color: #ff0000;
 }
 
 .dropdown-item:hover {
-  background-color: #ffe5cc;
+  background-color: #fff;
   color: #f28c38;
 }
 
