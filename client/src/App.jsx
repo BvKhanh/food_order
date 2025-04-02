@@ -28,7 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/menu/:restaurantId" element={<Menu />} /> {/* Cập nhật với restaurantId */}
+            <Route path="/menu/:restaurantId" element={<Menu />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -38,6 +38,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/restaurants" element={<Restaurants />} />
             <Route path="/reviews/:restaurantId" element={<Reviews />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
         </div>

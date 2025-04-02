@@ -1,18 +1,14 @@
-// backend/models/menu.js
 const db = require('../config/db');
 
-const Menu = {
-  findAllByRestaurant: async (restaurantId) => {
+class Menu {
+  static async getMenuByRestaurant(restaurantId) {
     const [rows] = await db.query(
-      'SELECT * FROM Menu WHERE restaurant_id = ? AND is_available = TRUE',
+      'SELECT * FROM menu WHERE restaurant_id = ? AND is_available = 1',
       [restaurantId]
     );
+    console.log('Database Query Result:', rows);
     return rows;
-  },
-  findById: async (id) => {
-    const [rows] = await db.query('SELECT * FROM Menu WHERE menu_id = ?', [id]);
-    return rows[0];
-  },
-};
+  }
+}
 
 module.exports = Menu;

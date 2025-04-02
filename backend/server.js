@@ -8,6 +8,7 @@ const orderRoutes = require('./routes/orderRoutes');
 const restaurantRoutes = require('./routes/restaurantRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
 const promotionRoutes = require('./routes/promotionRoutes');
+const paymentRoutes = require('./routes/paymentRoutes');
 const fs = require('fs');
 
 const app = express();
@@ -23,6 +24,7 @@ app.use('/api', orderRoutes);
 app.use('/api', restaurantRoutes);
 app.use('/api', reviewRoutes);
 app.use('/api', promotionRoutes);
+app.use('/api', paymentRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

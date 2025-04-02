@@ -1,16 +1,31 @@
 // src/pages/Cart.jsx
 import React from 'react';
 import { useCart } from '../context/CartContext';
-import { useNavigate } from 'react-router-dom'; // Thêm useNavigate
+import { useAuth } from '../context/AuthContext'; // Thêm AuthContext
+import { useNavigate } from 'react-router-dom';
 import '../css/Cart.css';
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateQuantity } = useCart();
-  const navigate = useNavigate(); // Thêm navigate
+  const { user } = useAuth(); // Lấy thông tin người dùng
+  const navigate = useNavigate();
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const handleCheckout = () => {
-    navigate('/checkout'); // Chuyển đến trang thanh toán
+    if (!user) {
+      // Nếu chưa đăng nhập, chuyển đến trang login
+      navigate('/login', { state: { from: '/checkout' } });
+      return;
+    }
+
+    if (cartItems.length === 0) {
+      alert('Giỏ hàng trống!');
+      return;
+    }
+
+    // Giả định restaurant_id nằm trong cartItems[0]
+    const restaurantId = cartItems[0].restaurant_id;
+    navigate('/checkout', { state: { restaurantId } });
   };
 
   return (
